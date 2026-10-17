@@ -1,0 +1,100 @@
+{
+  "app": "FraudShield AI",
+  "demo_notice": "SIMULATED DATA \u2014 test metrics cannot predict real-world performance",
+  "model_name": "Logistic Regression",
+  "selection_metric": "validation average precision (PR-AUC)",
+  "validation_pr_auc": 0.301,
+  "threshold": 0.1,
+  "trained_at": "2026-10-17T16:26:19.215391+00:00",
+  "dataset_rows": 7200,
+  "synthetic_fraud_rate": 0.0413,
+  "split": {
+    "train": 4608,
+    "validation": 1152,
+    "test": 1440
+  },
+  "test": {
+    "pr_auc": 0.1633,
+    "roc_auc": 0.7465,
+    "precision": 0.1709,
+    "recall": 0.339,
+    "f1": 0.2273,
+    "brier": 0.038,
+    "confusion": {
+      "tn": 1284,
+      "fp": 97,
+      "fn": 39,
+      "tp": 20
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "amount_ratio",
+      "label": "Amount vs. usual spend",
+      "importance": 0.06299
+    },
+    {
+      "feature": "device_trust_score",
+      "label": "Device trust",
+      "importance": 0.04488
+    },
+    {
+      "feature": "transactions_1h",
+      "label": "Transactions in past hour",
+      "importance": 0.04019
+    },
+    {
+      "feature": "amount_usd",
+      "label": "Transaction amount",
+      "importance": 0.02118
+    },
+    {
+      "feature": "merchant_category",
+      "label": "Merchant category",
+      "importance": 0.01588
+    },
+    {
+      "feature": "account_age_days",
+      "label": "Account age",
+      "importance": 0.00313
+    },
+    {
+      "feature": "is_new_payee",
+      "label": "New recipient",
+      "importance": 0.00019
+    },
+    {
+      "feature": "hour_of_day",
+      "label": "Transaction time",
+      "importance": 0.0
+    },
+    {
+      "feature": "merchant_risk_score",
+      "label": "Merchant risk",
+      "importance": 0.0
+    },
+    {
+      "feature": "is_international",
+      "label": "Cross-border payment",
+      "importance": 0.0
+    },
+    {
+      "feature": "card_present",
+      "label": "Card physically present",
+      "importance": 0.0
+    },
+    {
+      "feature": "payment_channel",
+      "label": "Payment channel",
+      "importance": 0.0
+    }
+  ],
+  "candidates": {
+    "logistic": {
+      "validation_pr_auc": 0.301
+    },
+    "forest": {
+      "validation_pr_auc": 0.2906
+    }
+  }
+}

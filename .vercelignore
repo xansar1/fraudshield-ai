@@ -1,0 +1,15 @@
+tests/
+.github/
+.git/
+.venv/
+.pytest_cache/
+**/__pycache__/
+**/*.pyc
+README.md
+PORTFOLIO_CARD.md
+scripts/
+Dockerfile
+run.command
+requirements-dev.txt
+data/*.bak
+portfolio_patch/
